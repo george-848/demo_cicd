@@ -1,1 +1,13 @@
 
+name: Hello Cloud Workflow
+
+on:
+  push:       # Runs when you push to the repo
+  workflow_dispatch:   # Also allows you to run it manually from GitHub Actions tab
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello Cloud
+        run: echo "Hello cloud"
